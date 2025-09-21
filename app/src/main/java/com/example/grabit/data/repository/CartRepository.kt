@@ -29,4 +29,19 @@ class CartRepository @Inject constructor(
 
         return allProducts
     }
+
+    suspend fun createCart(userId: Int, products: List<Product>): Any {
+        return cartApi.createCart(
+            mapOf(
+                "userId" to userId,
+                "date" to "2025-09-21",
+                "products" to products.map { product ->
+                    mapOf(
+                        "productId" to product.id,
+                        "quantity" to product.quantity
+                    )
+                }
+            )
+        )
+    }
 }

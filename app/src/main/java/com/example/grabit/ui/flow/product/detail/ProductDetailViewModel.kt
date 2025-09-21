@@ -4,12 +4,14 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.grabit.data.model.Product
+import com.example.grabit.data.model.UserResponse
+import com.example.grabit.data.repository.CartRepository
 import com.example.grabit.data.repository.ProductRepository
+import com.example.grabit.data.storage.UserPreferences
 import com.example.grabit.ui.navigation.AppDestinations.ProductDetail.KEY_PRODUCT_ID
 import com.example.grabit.ui.navigation.AppNavigator
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -18,7 +20,9 @@ import javax.inject.Inject
 class ProductDetailViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val navigator: AppNavigator,
-    private val productRepository: ProductRepository
+    private val productRepository: ProductRepository,
+    private val cartRepository: CartRepository,
+    userPreferences: UserPreferences
 ) : ViewModel() {
     private var productId: Int = savedStateHandle.get<String>(KEY_PRODUCT_ID)?.toInt()
         ?: throw IllegalArgumentException("Product id is required")
@@ -26,9 +30,11 @@ class ProductDetailViewModel @Inject constructor(
     private val _state = MutableStateFlow(ProductDetailState())
     val state = _state.asStateFlow()
 
+    private var user: UserResponse? = null
 
     init {
-        _state.value = _state.value.copy(productId = productId)
+        user = userPreferences.currentUser
+        _state.value = _state.value.copy(productId = productId, currentUser = user)
         fetchProductDetail()
     }
 
@@ -45,21 +51,17 @@ class ProductDetailViewModel @Inject constructor(
         }
     }
 
-
-    private val _cartList = MutableStateFlow<List<Product>>(emptyList())
-    val cartList: StateFlow<List<Product>> = _cartList.asStateFlow()
-
     fun addToCart(product: Product) {
         viewModelScope.launch {
-            val currentList = _cartList.value.toMutableList()
-            val index = currentList.indexOfFirst { it.id == product.id }
-            if (index >= 0) {
-                val existingProduct = currentList[index]
-                currentList[index] = existingProduct.copy(quantity = existingProduct.quantity + 1)
-            } else {
-                currentList.add(product)
+            try {
+                val response = cartRepository.createCart(
+                    user?.id ?: 1,
+                    listOf(product)
+                )
+                println("Single item cart created: $response")
+            } catch (e: Exception) {
+                e.printStackTrace()
             }
-            _cartList.value = currentList
         }
     }
 
@@ -71,5 +73,6 @@ class ProductDetailViewModel @Inject constructor(
 data class ProductDetailState(
     val isLoading: Boolean = false,
     val product: Product? = null,
-    val productId: Int? = null
+    val productId: Int? = null,
+    val currentUser: UserResponse? = null
 )

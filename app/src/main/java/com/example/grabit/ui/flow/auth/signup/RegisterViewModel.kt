@@ -8,7 +8,6 @@ import com.example.grabit.data.model.Name
 import com.example.grabit.data.model.RegisterRequest
 import com.example.grabit.data.model.UserResponse
 import com.example.grabit.data.repository.AuthRepository
-import com.example.grabit.data.repository.UserRepository
 import com.example.grabit.data.repository.UserSession
 import com.example.grabit.ui.navigation.AppDestinations
 import com.example.grabit.ui.navigation.AppNavigator
@@ -57,11 +56,11 @@ class RegisterViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val response = authRepo.registerUser(
-                    RegisterRequest(
-                        username = current.name,
-                        email = current.email,
-                        password = current.password
-                    )
+                RegisterRequest(
+                    username = current.name,
+                    email = current.email,
+                    password = current.password
+                )
                 )
 
                 val user = UserResponse(

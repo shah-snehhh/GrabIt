@@ -117,7 +117,10 @@ fun ProductDetailScreen() {
                         imageVector = Icons.Outlined.ShoppingBag,
                         contentDescription = "Buy Now",
                     )
-                    Text(stringResource(R.string.btn_buy_now), modifier = Modifier.padding(vertical = 4.dp, horizontal = 4.dp))
+                    Text(
+                        stringResource(R.string.btn_buy_now),
+                        modifier = Modifier.padding(vertical = 4.dp, horizontal = 4.dp)
+                    )
                 }
             }
         }
