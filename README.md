@@ -6,7 +6,7 @@ It uses the **FakeStore API** as a backend and demonstrates modern Android devel
 ---
 
 <!-- Banner/Image Placeholder -->
-<img src="screenshots/grabIt_banner.png"  alt="cover"  width="100%" height ="50%"/>
+<img src="screenshots/grabit_banner.png"  alt="cover"  width="100%" height ="50%"/>
 
 ## ✨ Features
 
