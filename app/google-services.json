@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1086410040238",
+    "project_id": "grabit-your-shopping-buddy",
+    "storage_bucket": "grabit-your-shopping-buddy.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086410040238:android:657da97d6780122c3a1e3f",
+        "android_client_info": {
+          "package_name": "com.example.grabit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086410040238-crin9okm5jkmk7qhhqbqq87a3fj6eq8e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grabit",
+            "certificate_hash": "a52875d3fe91c16d93f21d5c12ecd3cc80e8df7c"
+          }
+        },
+        {
+          "client_id": "1086410040238-ucrsi2nt8qo3l72f8qg5jr7k7rsdtj4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRo4Wdnpuu4-iMEHy3dr6a6ExOBzueCeo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086410040238-ucrsi2nt8qo3l72f8qg5jr7k7rsdtj4c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

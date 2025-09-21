@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">GrabIt</string>
+
+    <string name="common_btn_next">Next</string>
+    <string name="common_btn_delete">Delete</string>
+
+    <string name="btn_skip">SKIP</string>
+    <string name="btn_pay_now">Pay Now</string>
+    <string name="btn_start_shopping">Start Shopping</string>
+    <string name="btn_shop_now">Shop Now</string>
+    <string name="btn_see_all">See All</string>
+    <string name="btn_add_cart">Add to Cart</string>
+    <string name="btn_buy_now">Buy Now</string>
+    <string name="btn_explore_now">Explore Now</string>
+
+    <string name="common_title_name">Name</string>
+    <string name="common_title_email">Email</string>
+    <string name="common_title_password">Password</string>
+    <string name="common_title_confirm_password">Confirm Password</string>
+    <string name="common_title_cancel">Cancel</string>
+
+    <string name="intro_title_one">Shop Smarter with GrabIt</string>
+    <string name="intro_title_two">Discover Exclusive Deals</string>
+    <string name="intro_title_three">Safe &amp; Secure Checkout</string>
+    <string name="intro_content_one">Your ultimate shopping companion.</string>
+    <string name="intro_content_two">Unbeatable deals, personalized just for you.</string>
+    <string name="intro_content_three">Flexible payments, powered by top-notch security.</string>
+    <string name="get_started">Get started</string>
+
+    <string name="login_screen_title">Welcome Back!</string>
+    <string name="login_screen_description">Please login with registered account</string>
+    <string name="title_forgot_password">Forgot Password ?</string>
+    <string name="login_btn_title">Login</string>
+    <string name="login_other_method_title">Or</string>
+    <string name="login_screen_account_create_title">Don\'t have an account?</string>
+    <string name="login_screen_title_register">Register</string>
+    <string name="btn_continue_with_google">Continue with Google</string>
+
+    <string name="register_screen_title">Register Account</string>
+    <string name="register_screen_description">Start shopping by registering an account</string>
+    <string name="register_btn_title">Register Account</string>
+    <string name="register_screen_already_account_title">Already have an account?</string>
+
+    <string name="home_tab_label_home">Home</string>
+    <string name="home_tab_label_favorites">Favorite</string>
+    <string name="home_tab_label_cart">Cart</string>
+    <string name="home_tab_label_settings">Setting</string>
+
+    <string name="advertise_banner_one_title">New Arrivals</string>
+    <string name="advertise_banner_one_subTitle">New arrivals of the \nlatest fashion</string>
+    <string name="title_top_fashions">Top Fashions</string>
+
+    <string name="collection_title_one">Wireless Headphones</string>
+    <string name="collection_title_two">Sneakers</string>
+    <string name="collection_title_three">Kitchen</string>
+    <string name="collection_title_four">Mountain Bike</string>
+    <string name="collection_title_five">Watch</string>
+    <string name="collection_title_six">Sofa</string>
+
+    <string name="collection_image_one">https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg</string>
+    <string name="collection_image_two">https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg</string>
+    <string name="collection_image_three">https://images.pexels.com/photos/3952047/pexels-photo-3952047.jpeg</string>
+    <string name="collection_image_four">https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg</string>
+    <string name="collection_image_five">https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg</string>
+    <string name="collection_image_six">https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg</string>
+
+    <string name="title_your_orders">Your Orders</string>
+    <string name="title_total_price">Total Price   =</string>
+    <string name="empty_cart_title">Your cart is empty!</string>
+    <string name="empty_cart_subTitle">Looks like you haven\'t added anything yet.\nLet\'s start shopping!</string>
+    <string name="toast_removed_from_favorites">Removed from favorites</string>
+
+    <string name="edit_profile_title">Edit profile</string>
+    <string name="edit_profile_toolbar_save_text">Save</string>
+    <string name="edit_profile_image_chooser_camera_text">Camera</string>
+    <string name="edit_profile_image_chooser_gallery_text">Gallery</string>
+    <string name="edit_profile_image_chooser_remove_photo_text">Remove Photo</string>
+    <string name="edit_profile_first_name_label">First Name</string>
+    <string name="edit_profile_last_name_label">Last Name</string>
+    <string name="edit_profile_email_label">Email</string>
+    <string name="edit_profile_phone_label">Phone</string>
+
+    <string name="setting_delete_account_dialogue_title_text">Sorry to see you go!</string>
+    <string name="setting_delete_account_dialogue_confirm_btn_text">Delete Account</string>
+    <string name="setting_delete_account_dialogue_message_text">Deleting your account is permanent and you will lose all your data. Are you sure you want to delete your account permanently?</string>
+    <string name="settings_btn_delete_account">Delete Account</string>
+
+    <string name="title_favorite">Favorite</string>
+    <string name="title_delete_favorite_dialog">Delete All Favorites</string>
+    <string name="subTitle_delete_favorite_dialog">Are you sure you want to delete all favorites?</string>
+    <string name="toast_msg_removed_all_favorites">Removed all favorites</string>
+    <string name="empty_favorite_list_title">No Favorites Yet!</string>
+    <string name="empty_favorite_list_subTitle">You haven\'t saved any items yet.\nStart exploring and save your favorites!</string>
+
+    <string name="title_settings">Settings</string>
+    <string name="title_other_settings">Other Settings</string>
+    <string name="logout_dialog_title">Logout</string>
+    <string name="logout_dialog_subTitle">Are you sure you want to logout ?</string>
+    <string name="title_logout">Logout</string>
+
+    <string name="title_notification">Notification</string>
+    <string name="title_no_notifications">No Notifications</string>
+
+    <string name="toast_added_to_cart">%1$s added to cart</string>
+    <string name="empty_productList_title">No items Available</string>
+
+    <string name="search_bar_hint">Search products…</string>
+
+</resources>
